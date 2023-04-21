@@ -86,3 +86,32 @@ print(os.path.join(path1,path2))	# 输出user\desktop
 os.system("cmd")	#控制台指令
 ```
 
+### `__repr__`与`__str__`
+
+> `object.__repr__(self)`
+> Called by the repr() built-in function to compute the “official” string representation of an object. If at all possible, this should look like a valid Python expression that could be used to recreate an object with the same value (given an appropriate environment). If this is not possible, a string of the form <...some useful description...> should be returned. The return value must be a string object. If a class defines `__repr__()` but not `__str__()`, then `__repr__()` is also used when an “informal” string representation of instances of that class is required.
+> This is typically used for debugging, so it is important that the representation is information-rich and unambiguous.
+>
+> `object.__str__(self)`
+> Called by str(object) and the built-in functions format() and print() to compute the “informal” or nicely printable string representation of an object. The return value must be a string object.
+> This method differs from `object.__repr__()` in that there is no expectation that `__str__()` return a valid Python expression: a more convenient or concise representation can be used.
+> The default implementation defined by the built-in type object calls `object.__repr__()`.
+
+1. `__repr__`主要用于调试和开发，`__str__`用于为最终用户创建阅读友好的字符串。
+
+2. `__repr__`更像是一个Python表达式，可用于重新创建具有相同值的对象（给定适当的环境）。
+
+3. Python交互式命令行下直接输出对象默认使用 `__repr__`
+
+   似乎还是不太清楚，举几个内置对象的例子
+
+   ```python
+   s = 'Hello World!'
+   d = datetime.datetime.now()
+   print(str(s)) # out: Hello World!
+   print(repr(s)) # out: 'Hello World!'
+   print(str(d)) # out: 2023-3-19 14:36:18.013567
+   print(repr(d)) # out: datetime.dateime(2023, 3, 19, 14, 36, 18, 13567)
+   ```
+
+   

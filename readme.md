@@ -9,11 +9,14 @@ Here is the list:
 - Introduction of Computer (College Course)
 - OpenCV
 - Python
+- Python Spyder
 - Java
 - SpringBoot
+- SQL
 - MySQL
+- SQLite
 - Vue
-- Data structure - Stack
+- Data Structure - Stack
 
 ## 我的笔记
 
@@ -26,8 +29,11 @@ Here is the list:
 - 计算机导论(大学课程)
 - OpenCV
 - Python
+- Python Spyder
 - Java
 - SpringBoot
+- SQL
 - MySQL
+- SQLite
 - Vue
 - 数据结构 - 堆
